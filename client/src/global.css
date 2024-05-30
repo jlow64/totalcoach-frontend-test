@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --easy-white: #fafafa;
+  --background: #c3d2d6;
+  --light-grey: #cccccc;
+  --dark-grey: #949494;
+  --turquoise: #3bcab2;
+  --black: #0f0f0f;
+
+  /* Shadows */
+  --text-shadow: rgba(0, 0, 0, 0.004) 1px 1px 1px;
+
+  /* Font Setup */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
