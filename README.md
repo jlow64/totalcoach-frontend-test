@@ -9,7 +9,7 @@ The scope of this project will be to create an example page with react best prac
 - Vite
 - React.js
 - MUI
-- styled-components
+- emotion
 - react-query
 - express
 
@@ -40,7 +40,6 @@ The scope of this project will be to create an example page with react best prac
 > Material UI components that we will be using are:
 
 - Grid
-- Container
 - Avatar
 - IconButton
 - Button

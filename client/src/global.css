@@ -9,14 +9,17 @@
 :root {
   /* Colors */
   --easy-white: #fafafa;
-  --background: #c3d2d6;
-  --light-grey: #cccccc;
-  --dark-grey: #949494;
-  --turquoise: #3bcab2;
+  --background: #ebebf0;
+  --light-grey: #ebebf0;
+  --dark-grey: #9c9899;
+  --turquoise: #1ead83;
   --black: #0f0f0f;
 
   /* Shadows */
   --text-shadow: rgba(0, 0, 0, 0.004) 1px 1px 1px;
+
+  /* font */
+  --main-font: 'Montserrat', sans-serif;
 
   /* Font Setup */
   -webkit-font-smoothing: antialiased;
