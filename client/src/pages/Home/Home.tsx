@@ -1,29 +1,34 @@
 import Feed from 'components/Feed';
-import { HomeContainer, HomeItems, HeadingText } from './style';
-import { Box } from '@mui/material';
+import { HomeContainer, HomeItems, HeadingText, FlexBox } from './style';
 
 const Home = () => {
   // Need to style the components here
   return (
     <HomeContainer container>
-      <HomeItems item xs={12}>
-        <Box display="flex" flexDirection="column" height="300px" gap={'2rem'}>
-          <Box>
+      <HomeItems item xs={12} gap="2rem">
+        <FlexBox height="330px" gap="2rem">
+          <FlexBox>
             <HeadingText variant="h4">Hello John,</HeadingText>
             Heres what we have for you today.
-          </Box>
-          <Box>
+          </FlexBox>
+          <FlexBox height="100%" gap="1rem">
             <HeadingText variant="h5">Invitation Feed</HeadingText>
-            <Feed variant="invitation" />
-          </Box>
-        </Box>
+            <Feed
+              apiSource="invitation"
+              variant="horizontal"
+              background="background"
+            />
+          </FlexBox>
+        </FlexBox>
       </HomeItems>
-      <HomeItems height="500px" item xs={12} lg={6.5}>
+      <HomeItems item xs={12} lg={6.5}>
         <HeadingText variant="h5">Lesson Map</HeadingText>
       </HomeItems>
-      <HomeItems height="500px" item xs={12} lg={5.5}>
-        <HeadingText variant="h5">Activity feed</HeadingText>
-        <Feed variant="activity" />
+      <HomeItems item xs={12} lg={5.5} gap="1rem">
+        <HeadingText variant="h5" marginLeft="1.5rem">
+          Activity feed
+        </HeadingText>
+        <Feed apiSource="activity" variant="vertical" background="easyWhite" />
       </HomeItems>
     </HomeContainer>
   );

@@ -5,7 +5,8 @@ export const HomeContainer = styled(Grid)`
 `;
 
 export const HomeItems = styled(Grid)`
-  /* border: 1px dashed blue; */
+  display: flex;
+  flex-direction: column;
   font-family: var(--main-font);
   text-shadow: var(--text-shadow);
   color: var(--dark-grey);
@@ -18,9 +19,11 @@ export const HeadingText = styled(Typography)`
   font-family: var(--main-font);
   text-shadow: var(--text-shadow);
   color: var(--black);
-  font-weight: 600;
+  font-weight: 620;
+  letter-spacing: -0.9px;
 `;
 
-export const FeedBox = styled(Box)`
-  /* border: 1px solid red; */
+export const FlexBox = styled(Box)`
+  display: flex;
+  flex-direction: column;
 `;
