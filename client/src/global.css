@@ -10,10 +10,14 @@
   /* Colors */
   --easy-white: #fafafa;
   --background: #ebebf0;
-  --light-grey: #ebebf0;
-  --dark-grey: #9c9899;
+  --light-grey: #e7e6e6;
+  --dark-grey: #696969;
   --turquoise: #1ead83;
   --black: #0f0f0f;
+  --lilac: #7167bf;
+  --warm-yellow: #ffc141;
+  --gentle-blue: #7ac5ff;
+  --hazy-green: #95d8c4;
 
   /* Shadows */
   --text-shadow: rgba(0, 0, 0, 0.004) 1px 1px 1px;
@@ -24,4 +28,20 @@
   /* Font Setup */
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Width of custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dark-grey);
+  border-radius: 10px;
 }
