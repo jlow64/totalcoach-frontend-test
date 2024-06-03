@@ -38,7 +38,7 @@ export const CardTitle = styled(Typography)`
   font-family: var(--main-font);
   font-weight: 700;
   line-height: 25px;
-  letter-spacing: -0.9px;
+  letter-spacing: var(--letter-space);
 `;
 
 export const ChipContainer = styled(Box)`
@@ -80,7 +80,7 @@ export const FooterRow = styled(Box)`
   align-items: center;
   font-size: 0.65rem;
   color: var(--black);
-  letter-spacing: -0.8px;
+  letter-spacing: var(--letter-space);
   gap: 0.5rem;
   white-space: nowrap;
 `;

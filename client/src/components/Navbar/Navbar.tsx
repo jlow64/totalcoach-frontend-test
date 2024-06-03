@@ -1,5 +1,5 @@
-import { Toolbar, Box, Button } from '@mui/material';
-import { StyledNavbar } from './styles';
+import { Box } from '@mui/material';
+import { StyledNavbar, NavToolbar, NavMenuItem, ProfileBox } from './styles';
 import BookButton from 'components/BookButton';
 import Profile from 'components/Profile';
 
@@ -22,11 +22,13 @@ const Navbar = () => {
   // Will need to also style some components
   return (
     <StyledNavbar position="sticky">
-      <Toolbar
+      <NavToolbar
         sx={{
-          height: '70px',
-          justifyContent: 'space-between',
-          background: 'var(--easy-white)',
+          height: {
+            xs: 'fit-content',
+            sm: 'fit-content',
+            md: '70px',
+          },
         }}
       >
         <Box
@@ -37,27 +39,23 @@ const Navbar = () => {
         />
         <Box>
           {menuOptions.map((item) => {
-            return (
-              <Button
-                key={item}
-                sx={{ color: 'var(--black)', fontFamily: 'var(--main-font)' }}
-              >
-                {item}
-              </Button>
-            );
+            // To add routing functionality, we can add links for each item to redirect to respective routes
+            return <NavMenuItem key={item}>{item}</NavMenuItem>;
           })}
         </Box>
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          alignItems="center"
-          color="var(--black)"
+        <ProfileBox
+          sx={{
+            flexDirection: {
+              xs: 'column',
+              sm: 'column',
+              md: 'row',
+            },
+          }}
         >
           <BookButton />
           <Profile />
-        </Box>
-      </Toolbar>
+        </ProfileBox>
+      </NavToolbar>
     </StyledNavbar>
   );
 };
