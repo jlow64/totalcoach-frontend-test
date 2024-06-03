@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import type { LayoutVariant, FeedCardInfo } from 'src/types/components.type';
 import {
   CardChip,
@@ -45,18 +44,14 @@ const Card = ({
   height,
   variant,
 }: CardProps) => {
-  useEffect(() => {
-    console.log(status);
-  }, []);
-
   return (
     <CardContainer width={width} height={height}>
       <CardHeader status={status}>
         <CardBox>
           <CardTitle variant="h6">{title}</CardTitle>
           <ChipContainer>
-            {coaches.map((coach: string) => (
-              <CardChip label={coach} />
+            {coaches.map((coach: string, index: number) => (
+              <CardChip key={`${coach}-${index}`} label={coach} />
             ))}
           </ChipContainer>
         </CardBox>

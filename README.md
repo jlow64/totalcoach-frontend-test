@@ -77,5 +77,23 @@ The scope of this project will be to create an example page with react best prac
 For now the server api will give us:
 - Activity feed json
 - Invitiation feed json
+- Profile info json
+- Lesson map UI json
+
+To launch the dev application, we need to have two terminals open in the base directory.
+
+From the root folder firstly:
+```
+cd client
+yarn install
+yarn dev
+```
+Then to turn on the server do:
+```
+cd server
+yarn install
+yarn dev
+```
+> There are currently no dependencies on env variables.
 
 ### by jlow64
