@@ -1,3 +1,5 @@
+import { useQuery } from '@tanstack/react-query';
+import { getProfile } from 'src/api';
 import {
   ExpandIcon,
   ProfileItemsBox,
@@ -6,25 +8,25 @@ import {
   ProfileName,
   ExpandButton,
 } from './style';
-
-// Mock info until API integration
-const mockProfile = {
-  firstName: 'John',
-  lastName: 'Smith',
-};
+import { Skeleton } from '@mui/material';
 
 const Profile = () => {
   // Need to style the components here
-  // Perhaps there should be an API call here to grab the profile info,
-  // maybe with login
-  return (
+  const { isLoading, data } = useQuery({
+    queryKey: ['Profile'],
+    queryFn: getProfile,
+  });
+
+  return !data || isLoading ? (
+    <Skeleton variant="rounded" animation="wave" width="100%" height="100%" />
+  ) : (
     <ProfileItemsBox>
       <ProfileIcon>
-        {mockProfile.firstName.charAt(0) + mockProfile.lastName.charAt(0)}
+        {data.firstName.charAt(0) + data.lastName.charAt(0)}
       </ProfileIcon>
       <ProfileMenu>
-        <ProfileName>{mockProfile.firstName}</ProfileName>
-        {mockProfile.lastName}
+        <ProfileName>{data.firstName}</ProfileName>
+        {data.lastName}
       </ProfileMenu>
       {/* we can create a profile menu popup by overriding the onClick callback*/}
       <ExpandButton variant="contained" disableElevation>

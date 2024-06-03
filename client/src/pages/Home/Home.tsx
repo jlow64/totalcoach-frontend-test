@@ -3,7 +3,6 @@ import LessonMap from 'components/LessonMap';
 import { HomeContainer, HomeItems, HeadingText, FlexBox } from './style';
 
 const Home = () => {
-  // Need to style the components here
   return (
     <HomeContainer container>
       <HomeItems item xs={12} gap="2rem">
