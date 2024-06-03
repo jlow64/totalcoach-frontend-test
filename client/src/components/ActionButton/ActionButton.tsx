@@ -1,4 +1,4 @@
-import { StyledActionButton } from './style';
+import { ActionIcon, StyledActionButton } from './style';
 /*
 To Make this component reusable as possible, taking in an src for the icon
 would allow this to be reusable, alongside have a callback prop to allow
@@ -18,13 +18,17 @@ const ActionButton = ({
   height = '2rem',
   width = '2rem',
 }: ActionButtonProps) => {
+  // To overide MUI width/height have to set both the min/max height
   return (
     <StyledActionButton
       onClick={onClick}
-      src={src}
-      alt={alt}
-      sx={{ height: height, width: width }}
-    />
+      variant="contained"
+      disableElevation
+      width={width}
+      height={height}
+    >
+      <ActionIcon src={src} alt={alt} width={width} height={height} />
+    </StyledActionButton>
   );
 };
 

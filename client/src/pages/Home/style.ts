@@ -20,7 +20,7 @@ export const HeadingText = styled(Typography)`
   text-shadow: var(--text-shadow);
   color: var(--black);
   font-weight: 620;
-  letter-spacing: -0.9px;
+  letter-spacing: var(--letter-space);
 `;
 
 export const FlexBox = styled(Box)`

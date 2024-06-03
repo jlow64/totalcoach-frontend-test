@@ -1,13 +1,16 @@
-import { BookButtonBox, StyledButton } from './style';
+import { StyledButton, ButtonIcon, ButtonText } from './style';
 interface BookButtonProps {
   text?: string;
 }
 const BookButton = ({ text = 'Book Lesson' }: BookButtonProps) => {
-  // Need to style the components here
+  /* 
+    We can override the styled button onClick with a custom callback 
+  */
   return (
-    <BookButtonBox>
-      <StyledButton>{text}</StyledButton>
-    </BookButtonBox>
+    <StyledButton variant="contained" size="large">
+      <ButtonIcon src="/plus.svg" />
+      <ButtonText>{text}</ButtonText>
+    </StyledButton>
   );
 };
 
