@@ -6,6 +6,7 @@ type SizeProps = {
 export const StyledActionButton = styled(Button)<SizeProps>`
   border-radius: 50%;
   background: var(--turquoise);
+  font-family: var(--main-font);
   min-width: ${(props) => props.width};
   max-width: ${(props) => props.width};
   min-height: ${(props) => props.height};

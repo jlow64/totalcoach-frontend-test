@@ -1,4 +1,5 @@
 import Feed from 'components/Feed';
+import LessonMap from 'components/LessonMap';
 import { HomeContainer, HomeItems, HeadingText, FlexBox } from './style';
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
       </HomeItems>
       <HomeItems item xs={12} lg={6.5}>
         <HeadingText variant="h5">Lesson Map</HeadingText>
+        <LessonMap />
       </HomeItems>
       <HomeItems item xs={12} lg={5.5} gap="1rem">
         <HeadingText variant="h5" marginLeft="1.5rem">
